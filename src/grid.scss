@@ -1,0 +1,15 @@
+$bp-small: 544px;
+$bp-medium: 768px;
+$bp-large: 992px;
+$bp-extra-large: 1200px;
+$bp-nolimit: 1280px;
+
+@mixin _container {
+  padding: 15px;
+  min-height: 1px;
+  margin: 0 auto;
+  @media (min-width: $bp-medium) {width: 750px;}
+  @media (min-width: $bp-large) {width: 970px;}
+  @media (min-width: $bp-extra-large) {width: 1170px;}
+  @media (min-width: $bp-nolimit) {width: 1280px;}
+}
