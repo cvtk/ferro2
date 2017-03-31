@@ -1,0 +1,144 @@
+@font-face {
+  font-family:'Open Sans';
+  src: url('fonts/OpenSans-Light.eot');
+  src: url('fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+    url('fonts/OpenSans-Light.woff') format('woff'),
+    url('fonts/OpenSans-Light.ttf') format('truetype'),
+    url('fonts/OpenSans-Light.svg#OpenSans-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family:'Open Sans';
+  src: url('fonts/OpenSans.eot');
+  src: url('fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+    url('fonts/OpenSans.woff') format('woff'),
+    url('fonts/OpenSans.ttf') format('truetype'),
+    url('fonts/OpenSans.svg#OpenSans') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family:'Open Sans';
+  src: url('fonts/OpenSans-Italic.eot');
+  src: url('fonts/OpenSans-Italic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/OpenSans-Italic.woff') format('woff'),
+    url('fonts/OpenSans-Italic.ttf') format('truetype'),
+    url('fonts/OpenSans-Italic.svg#OpenSans-Italic') format('svg');
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family:'Open Sans';
+  src: url('fonts/OpenSans-Bold.eot');
+  src: url('fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/OpenSans-Bold.woff') format('woff'),
+    url('fonts/OpenSans-Bold.ttf') format('truetype'),
+    url('fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family:'Oswald';
+  src: url('fonts/Oswald-Light.eot');
+  src: url('fonts/Oswald-Light.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Oswald-Light.woff') format('woff'),
+    url('fonts/Oswald-Light.ttf') format('truetype'),
+    url('fonts/Oswald-Light.svg#Oswald-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family:'Oswald';
+  src: url('fonts/Oswald-Regular.eot');
+  src: url('fonts/Oswald-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Oswald-Regular.woff') format('woff'),
+    url('fonts/Oswald-Regular.ttf') format('truetype'),
+    url('fonts/Oswald-Regular.svg#Oswald-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family:'Oswald';
+  src: url('fonts/Oswald-Medium.eot');
+  src: url('fonts/Oswald-Medium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Oswald-Medium.woff') format('woff'),
+    url('fonts/Oswald-Medium.ttf') format('truetype'),
+    url('fonts/Oswald-Medium.svg#Oswald-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family:'Oswald';
+  src: url('fonts/Oswald-Heavy.eot');
+  src: url('fonts/Oswald-Heavy.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Oswald-Heavy.woff') format('woff'),
+    url('fonts/Oswald-Heavy.ttf') format('truetype'),
+    url('fonts/Oswald-Heavy.svg#Oswald-Heavy') format('svg');
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family: "Icons";
+  src: url("fonts/Icons.eot");
+  src: url("fonts/Icons.eot?#iefix") format("embedded-opentype"),
+       url("fonts/Icons.woff") format("woff"),
+       url("fonts/Icons.ttf") format("truetype"),
+       url("fonts/Icons.svg#Icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Icons";
+    src: url("fonts/Icons.svg#Icons") format("svg");
+  }
+}
+
+.icon {
+  &:before {
+    font-family: "Icons";
+    font-size: 20px;
+    font-style: normal;
+    margin-left: 20px;
+  }
+  &._search:before { content: "\f100"; }
+  &._logout:before { content: "\f101"; }
+  &._cart:before { content: "\f102"; }
+  &._mail:before { content: "\f103"; }
+  &._twitter:before { content: "\f104"; }
+  &._vk:before { content: "\f105"; }
+  &._ok:before { content: "\f106"; }
+  &._close:before { content: "\f107"; }
+  &._next:before { content: "\f108"; }
+  &._back:before { content: "\f109"; }
+  &._reload:before { content: "\f10a"; }
+  &._facebook:before { content: "\f10b"; }
+  &._ruble:before { content: "\f10c"; }
+}
+

@@ -39,7 +39,7 @@ module.exports = function(grunt) {
         src: [
         'src/vendor/*.{scss,css}',
         'src/fonts/**/*.{scss,css}',
-        'src/init.scss',
+        'src/*.scss',
         'src/components/**/*.{scss,css}'
         ],
         dest: 'src/tmp/build.scss',
@@ -93,9 +93,9 @@ module.exports = function(grunt) {
       dynamic: {
         files: [{
           expand: true,
-          cwd: 'src/components/',
+          cwd: 'src/images/',
           src: ['**/*.{png,jpg,gif,svg}'],
-          dest: 'dist/assets/img/',
+          dest: 'dist/assets/images/',
           flatten: true
         }]
       }
@@ -112,7 +112,7 @@ module.exports = function(grunt) {
 
     watch: {
       assets: {
-        files: ['src/*.html', 'src/init.{scss,js}', 'src/components/**/*.{js,scss,css,png,jpg,gif}', 'src/fonts/**/*.{eot,svg,ttf,woff,woff2}', 'src/vendor/**/*.{scss,css,js}'],
+        files: ['src/*.html', 'src/*.{scss,js}', 'src/components/**/*.{js,scss,css,png,jpg,gif}', 'src/fonts/**/*.{eot,svg,ttf,woff,woff2}', 'src/vendor/**/*.{scss,css,js}'],
         tasks: ['copy', 'concat', 'sass'],
         options: {
           spawn: false,
