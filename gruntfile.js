@@ -37,6 +37,7 @@ module.exports = function(grunt) {
 
       css: {
         src: [
+        'src/options.scss',
         'src/vendor/*.{scss,css}',
         'src/fonts/**/*.{scss,css}',
         'src/*.scss',

@@ -1,0 +1,11 @@
+.page-contacts {
+  @include _container;
+  &:after { @include _clear }
+  padding-top: 0;
+  > .contacts-item {
+    font-size: 17px;
+  }
+  > .contacts-subtitle {
+    text-align: center;
+  }
+}

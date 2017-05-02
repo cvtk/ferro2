@@ -28,30 +28,30 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
   <link rel="stylesheet" href="assets/a.css">
 </head>
-<body>
+<body class="main-page">
 <header class="page-header">
   <div class="header-layout">
     <a class="logo-link" href="#">
       <img class="image" src="assets/images/logo.png"></img>
     </a>
     <nav class="main-nav">
-      <a class="item" href="#">О компании</a>
-      <a class="item" href="#">Новости</a>
-      <a class="item" href="#">Каталог продукции</a>
-      <a class="item _active" href="#">Партнеры</a>
-      <a class="item" href="#">Контакты</a>
+      <a class="item" href="about.html">О компании</a>
+      <a class="item" href="news.html">Новости</a>
+      <a class="item" href="shop.html">Каталог продукции</a>
+      <a class="item" href="partners.html">Партнеры</a>
+      <a class="item" href="contacts.html">Контакты</a>
       <span class="icon _search"></span>
       <span class="icon _cart"><span class="counter">2</span></span>
     </nav>
   </div>
 </header>
 <section class="page-slider">
-  <nav class="slider-nav" data-slider-nav>
+  <nav class="slider-nav" data-slider-nav id="sliderNav">
     <div class="item" style="background-image: url('assets/images/slider_1.jpg')"></div>
     <div class="item" style="background-image: url('assets/images/slider_2.jpg')"></div>
     <div class="item" style="background-image: url('assets/images/slider_3.jpg')"></div>
   </nav>
-  <ul class="slider-show">
+  <ul class="slider-show" id="sliderShow">
     <li class="show-item">
       <div class="background" style="background-image: url('assets/images/slider_1.jpg')"></div>
       <h2 class="header">Заголовок слайда: четыре слова
@@ -72,7 +72,40 @@
     </li>
   </ul>
 </section>
-
+<h2 class="header">Популярные товары</h2>
+<section class="page-shop">
+  <form class="shop-item">
+    <img class="image" data-lazy="assets/images/1.jpg" />
+    <h3 class="header">Аквадистиллятор АЭ-14-01</h3>
+    <span class="price">23 450</span>
+    <a class="addtocart" href="#2">В корзину</a>
+  </form>
+  <form class="shop-item">
+    <img class="image" data-lazy="assets/images/2.jpg" />
+    <h3 class="header">Аквадистиллятор АЭ-14-01</h3>
+    <span class="price">23 450</span>
+    <a class="addtocart" href="#2">В корзину</a>
+  </form>
+  <form class="shop-item">
+    <img class="image" data-lazy="assets/images/3.jpg" />
+    <h3 class="header">Аквадистиллятор АЭ-14-01</h3>
+    <span class="price">23 450</span>
+    <a class="addtocart" href="#2">В корзину</a>
+  </form>
+  <form class="shop-item">
+    <img class="image" data-lazy="assets/images/4.jpg" />
+    <h3 class="header">Аквадистиллятор АЭ-14-01</h3>
+    <span class="price">23 450</span>
+    <a class="addtocart" href="#2">В корзину</a>
+  </form>
+  <form class="shop-item">
+    <img class="image" data-lazy="assets/images/5.jpg" />
+    <h3 class="header">Аквадистиллятор АЭ-14-01</h3>
+    <span class="price">23 450</span>
+    <a class="addtocart" href="#2">В корзину</a>
+  </form>
+</section>
+<h2 class="header">Наши новости</h2>
 <section class="page-blog">
   <a class="blog-item" href="#" style="background-image: url('assets/images/blog_2.jpg')">
     <div class="overlay"></div>
@@ -92,7 +125,7 @@
   </a>
   <a class="blog-item" href="#" style="background-image: url('assets/images/blog_3.jpg')">
     <div class="overlay"></div>
-    <span class="tag">Новости</span>
+    <span class="tag _article">Статьи</span>
     <div class="item-content">
       <h2 class="header">Мы продлеваем акцию</h2>
       <h3 class="teaser">Нам поступили запросы от наших партнеров с просьбой продлить акцию на рециркуляторы РБ-06-«Я-ФП» «Ультра-Лайт» и мы не смогли отказать!</h3>
@@ -108,14 +141,56 @@
   </a>
   <a class="blog-item" href="#" style="background-image: url('assets/images/blog_1.jpg')">
     <div class="overlay"></div>
-    <span class="tag">Новости</span>
+    <span class="tag _stock">Акции</span>
     <div class="item-content">
       <h2 class="header">Разбился самолет</h2>
       <h3 class="teaser">Есть жерты среди гражданских</h3>
     </div>
   </a>
 </section>
+<h2 class="header">C нами уже работают</h2>
+<section class="page-partners">
+  <a class="partners-item" href="http://www.medlto.ru/" target="_blank">
+    <img class="image" data-lazy="assets/images/partner_1.png" />
+    <h4 class="header">Медицинская и лабораторная техника</h4>
+  </a>
+  <a class="partners-item" href="http://www.medsnab.ru/" target="_blank">
+    <img class="image" data-lazy="assets/images/partner_2.png" />
+    <h4 class="header">Группа компаний "Медснаб Групп"</h4>
+  </a>
+  <a class="partners-item" href="http://www.farm-invest.ru/" target="_blank">
+    <img class="image" data-lazy="assets/images/partner_3.png" />
+    <h4 class="header">ООО "Фарм-инвест"</h4>
+  </a>
+  <a class="partners-item" href="http://tdavers.ru/" target="_blank">
+    <img class="image" data-lazy="assets/images/partner_4.png" />
+    <h4 class="header">Торговый дом "Аверс"</h4>
+  </a>
+  <a class="partners-item" href="http://www.kiel-m.ru/" target="_blank">
+    <img class="image" data-lazy="assets/images/partner_5.png" />
+    <h4 class="header">ГМК Киль</h4>
+  </a>
+  <a class="partners-item" href="http://www.medcomp.ru/" target="_blank">
+    <img class="image" data-lazy="assets/images/partner_6.png" />
+    <h4 class="header">АВК Медкомплекс</h4>
+  </a>
+</section>
+<section class="page-parallax">
+  <div class="content">
+    <span class="_hl">Первая</span> причина выбрать именно нас, следом <span class="_hl">вторая</span> и <span class="_hl">третья</span>
+  </div>
+</section>
 
+<footer class="page-footer">
+  <div class="_layout">
+    <nav class="footer-menu">
+      <a class="item" href="#">О Компании</a>
+      <a class="item" href="#">Публикации</a>
+      <a class="item" href="#">Контакты</a>
+      <span class="item _copyright">&copy; ООО «Ферропласт Медикал», <script type="text/javascript">document.write(new Date().getFullYear());</script></span>
+    </nav>
+  </div>
+</footer>
   <!-- Main js code here -->
   <script src=/assets/a.js async></script>
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

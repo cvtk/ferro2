@@ -1,6 +1,8 @@
 .page-blog {
   position: relative;
   margin: 3px;
+  height: 100vh;
+  &:after { @include _clear }
 }
 
 .blog-item {
@@ -65,6 +67,8 @@
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
+    &._stock { background-color: $frt-color; }
+    &._article { background-color: #7518c7; }
   }
 }
 

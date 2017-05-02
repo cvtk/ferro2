@@ -1,0 +1,67 @@
+.page-shop {
+  @include _container;
+  &:after { @include _clear }
+}
+
+.shop-item {
+  position: relative;
+  float: left;
+  width: 33.3333%;
+  padding: 15px;
+  margin: 15px 0;
+  font-size: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid transparent;
+  &:focus { outline: none; }
+  > .image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+  > .header {
+    font-size: 17px;
+    font-weight: 300;
+    color: $cnt-color;
+    margin: 10px 0;
+  }
+  > .price {
+    font-weight: 700;
+    font-size: 20px;
+    color: #444;
+    display: block;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  > .addtocart {
+    display: block;
+    width: 150px;
+    margin: 10px auto;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $cnt-color;
+    border: 1px solid lighten($cnt-color, 50%);
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    transition: .35s ease-in-out;
+    outline: 0;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  &:hover {
+    border: 1px solid rgba(50, 50, 50, 0.10);
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.25);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.25);
+    box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.25);
+    > .addtocart {
+      background-color: $cnt-color;
+      border-color: darken( $pri-color, 100% ); 
+      color: $pri-color;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.page-parallax {
+  position: relative;
+  background-image: url("images/parallax.jpg");
+  height: 500px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .45);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAADFBMVEX///8AAAAAAAAAAAD4jAJNAAAABHRSTlMAHUhNl6CumQAAACdJREFUSMdjVGLAARgFccmwjOoZ1TOqZ1TPqJ5RPaN6RvWM6hn2egAwugrub70DrwAAAABJRU5ErkJggg==);
+  }
+  > .content {
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 10%;
+    z-index: 1;
+    padding: 0 12px;
+    font-size: 52px;
+    color: $pri-color;
+    font-weight: 400;
+    > ._hl { color: $sec-color; }
+  }
+}

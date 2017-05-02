@@ -1,6 +1,7 @@
 $pri-color: #fff;
 $sec-color: #18BBC7;
-$ter-color: #FF871C;
+$ter-color: #c74718;
+$frt-color: #c79e18;
 $cnt-color: #444;
 
 $min-width: 320px;
@@ -13,7 +14,20 @@ html { box-sizing: border-box }
 
 body {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   color: $cnt-color;
   min-width: $min-width;
+  line-height: 1.5;
+}
+
+.main-page > .header {
+  background: none;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  color: #000;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-transform: uppercase;
 }

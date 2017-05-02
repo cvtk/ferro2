@@ -1,0 +1,23 @@
+.page-pagination {
+  margin: 0 auto;
+  width: 330px;
+  text-align: center;
+  > .item {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 15px 5px;
+    color: #707070;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 5px 15px;
+    text-decoration: none;
+    text-align: center;
+    transition: .35s ease-in-out;
+    &:hover, &._active {
+      background: $sec-color;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+  }
+}
