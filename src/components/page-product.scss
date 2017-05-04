@@ -1,6 +1,50 @@
+.product-content {
+  @include _container;
+  &:after { @include _clear }
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+  margin-top: -30px;
+  > .content-info {
+    color: $cnt-color;
+    border: 1px solid $cnt-color;
+    padding: 10px 30px;
+    width: 100%;
+    height: 350px;
+    overflow: scroll;
+  }
+  > .content-tabs {
+    &:after { @include _clear }
+    list-style: none;
+    margin: 0;
+    margin-bottom: -1px;
+
+    > .tab {
+      float: left;
+      padding: 10px;
+      border-left: 1px solid #aaa;
+      border-bottom: 1px solid #aaa;
+      border-top: 1px solid #aaa;
+      color: #aaa;
+      cursor: pointer;
+      transition: all .25s ease;
+      &:last-child {
+        border-right: 1px solid #aaa;
+      }
+      &._active, &:hover {
+        color: $cnt-color;
+        border-color: $cnt-color;
+        border-bottom-color: #aaa;
+      }
+    }
+  }
+}
+
+
 .page-product {
   @include _container;
   &:after { @include _clear }
+  font-size: 17px;
   margin: 30px auto;
   > .product-wrapper {
     position: relative;
@@ -11,6 +55,7 @@
     @media (max-width: $bp-large) { width: 100%; padding-left: 12px; padding-right: 12px;}
     > .wrapper-image {
       position: relative;
+      width: 700px;
       margin: 0 auto;
       > .image {}
     }
@@ -38,6 +83,9 @@
       line-height: 1;
       vertical-align: top;
       padding: 12px 0 22px;
+    }
+    > .icon:after {
+      font-size: 17px;
     }
     > .description {
       margin: 0;
@@ -76,26 +124,11 @@
         box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
       }
     }
-    > .outofstock {
-      display: inline-block;
-      color: #fff;
-      background-color: #444;
-      padding: 14px;
-      line-height: 16px;
-      width: 100%;
-      font-size: 16px;
-      transition: color .35s ease;
-      cursor: default;
-      text-align: center;
-      &:hover { color: $sec-color; }
-      @media (max-width: $bp-large) { width: 30%; }
-      @media (max-width: $bp-medium) { width: 100%; }
-    }
 
     > .add {
       display: inline-block;
       color: #fff;
-      background-color: #282828;
+      background-color: $cnt-color;
       padding: 14px;
       line-height: 16px;
       width: 75%;
@@ -103,21 +136,21 @@
       border: 0;
       transition: .35s ease;
       cursor: pointer;
-      &:hover { background-color: #444; }
+      &:hover { background-color: $sec-color; }
       @media (max-width: $bp-large) { width: 30%; }
       @media (max-width: $bp-medium) { width: 75%; }
     }
     > .quantity {
       display: inline-block;
       color: #fff;
-      background-color: #282828;
+      background-color: $cnt-color;
       padding: 14px;
       line-height: 16px;
       width: 25%;
       text-align: center;
       font-size: 15px;
       border: 0;
-      border-left: 1px solid #dadada;
+      border-left: 1px solid $cnt-color;
       outline: 0;
       @media (max-width: $bp-large) { width: 10%; }
       @media (max-width: $bp-medium) { width: 25%; }

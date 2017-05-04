@@ -100,7 +100,7 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('.page-shop').slick({
     centerMode: true,
-    slidesToShow: 3,
+    slidesToShow: 5,
     centerPadding: '10px',
     lazyLoad: 'ondemand',
     dots: true,
