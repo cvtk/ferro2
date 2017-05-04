@@ -1,44 +1,147 @@
 .page-news {
-  float: left;
-  width: 66.666667%;
-  padding: 0 12px;
-  @media (max-width: $bp-medium) { width: 100%; }
-  > .news-item {
-    &:after { 
-      @include _clear;
+  @include _container;
+  &:after { @include _clear }
+  padding-top: 0;
+  > .news-pagination {
+    margin: 0 auto;
+    width: 330px;
+    text-align: center;
+    > .item {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 15px 5px;
+      color: #707070;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      padding: 5px 15px;
+      text-decoration: none;
+      text-align: center;
+      transition: .35s ease-in-out;
+      &:hover, &._active {
+        background: $sec-color;
+        color: #fff;
+        border: 1px solid #fff;
+      }
+    }
+}
+  > .news-sidebar {
+    position: relative;
+    float: left;
+    width: 33.333333%;
+    padding-left: 15px;
+    @media (max-width: $bp-medium) { display: none; }
+    > .sidebar-categories {
+      text-align: right;
       border-bottom: 1px solid #eee;
-      padding-bottom: 15px;
-      width: 80%;
-      margin: 0 auto;
-    }
-    padding-bottom: 30px;
-    > .header {
-      font-size: 26px;
-      font-weight: 400;
-      color: #282828;
-      line-height: 1.2;
-      padding: 15px 0; 
-      margin: 0;
-    }
-    > .image {
-        height: 330px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    > .meta {
+      margin-bottom: 30px;
+      .categories-item {
+        position: relative;
+        transition: background-color .25s ease;
+        cursor: pointer;
+        &:hover {
+          background-color: #eee;
+          > .icon:before { margin-left: 30px; color: $sec-color; }
+          > .category { color: $sec-color; }
+        }
+        &:after { @include _clear }
+        > .icon {
+          display: block;
+          float: left;
+          padding: 16px 0;
+          &:before {
+          margin-right: 10px;
+          font-size: 12px;
+          transition: all .25s ease;
+        }
+      }
+      > .category {
         display: block;
-        border-left: 4px solid $sec-color;
-        padding: 0 15px;
+        float: right;
+        font-weight: 300;
+        padding: 15px;
+        font-size: 17px;
+        transition: color .25s ease;
+        }
+      }
+    }
+    > .sidebar-search {
+      position: relative;
+      border: 1px solid #eee;
+      margin-bottom: 30px;
+      > .search {
+        font-family: "Open Sans", Arial, Helvetica, sans-serif;
+        text-align: right;
+        border: none;
+        padding: 10px 5px;
+        padding-right: 40px;
+        outline: none;
+        color: #aaa;
+        font-size: 15px;
+        font-style: italic;
+        font-weight: 300;
+        width: 100%;
+      }
+      > .icon:before {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        color: #aaa;
+      }
+    }
+  }
+  > .news-items {
+      float: left;
+      width: 66.666667%;
+      padding-right: 15px;
+      @media (max-width: $bp-medium) { width: 100%; }
+    > .items-article {
+      &:after { 
+        @include _clear;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+        width: 80%;
+        margin: 0 auto;
+      }
+      padding-bottom: 30px;
+      > .header {
+        font-size: 26px;
+        font-weight: 400;
+        color: #282828;
+        line-height: 1.2;
+        padding: 15px 0; 
         margin: 0;
-        margin-bottom: 30px;
-        line-height: 1.5;
-        
-    }
-    > .teaser {
-      padding-bottom: 15px;
-    }
-    > .readmore {
+      }
+      > .image {
+          height: 330px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          > .tag {
+              display: inline-block;
+              color: #fff;
+              padding: 10px;
+              background-color: #c74718;
+              text-align: center;
+              font-weight: bold;
+              text-transform: uppercase;
+              &._stock { background-color: $frt-color; }
+              &._article { background-color: #7518c7; }
+          }
+      }
+      > .meta {
+          display: block;
+          border-left: 4px solid $sec-color;
+          padding: 0 15px;
+          margin: 0;
+          margin-bottom: 30px;
+          line-height: 1.5;
+          
+      }
+      > .teaser {
+        padding-bottom: 15px;
+      }
+      > .readmore {
         display: inline-block;
         font-size: 13px;
         font-weight: 600;
@@ -58,6 +161,7 @@
           color: #fff;
           border: 1px solid #fff;
         }
+      }
     }
   }
 }

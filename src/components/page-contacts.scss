@@ -2,10 +2,96 @@
   @include _container;
   &:after { @include _clear }
   padding-top: 0;
-  > .contacts-item {
+  > .contacts-address {
+    margin-bottom: 30px;
+    &:after { @include _clear }
+    position: relative;
     font-size: 17px;
+    border-bottom: 1px solid #ffd24d;
+    width: 100%;
+    > .address-icon {
+      float: left;
+      margin: 35px;
+      background-image: url('images/map.svg');
+      background-repeat: no-repeat;
+      width: 75px;
+      height: 75px;
+    }
+    > .address-items {
+      float: left;
+      padding-bottom: 30px;
+      > .item {
+        font-weight: 300;
+      }
+    }
   }
-  > .contacts-subtitle {
-    text-align: center;
+  > .contacts-phone {
+    margin-bottom: 30px;
+    &:after { @include _clear }
+    position: relative;
+    font-size: 17px;
+    border-bottom: 1px solid #ffd24d;
+    width: 100%;
+    > .phone-icon {
+      float: left;
+      margin: 35px;
+      background-image: url('images/phone.svg');
+      background-repeat: no-repeat;
+      width: 75px;
+      height: 75px;
+    }
+    > .phone-items {
+      float: left;
+      padding-bottom: 30px;
+      > .item {
+        font-weight: 300;
+      }
+    }
+  }
+  > .contacts-messages {
+    margin-bottom: 30px;
+    &:after { @include _clear }
+    position: relative;
+    font-size: 17px;
+    border-bottom: 1px solid #ffd24d;
+    width: 100%;
+    > .messages-icon {
+      float: left;
+      margin: 35px;
+      background-image: url('images/chatting.svg');
+      background-repeat: no-repeat;
+      width: 75px;
+      height: 75px;
+    }
+    > .messages-items {
+      float: left;
+      padding-bottom: 30px;
+      > .item {
+        font-weight: 300;
+      }
+    }
+  }
+  > .contacts-service {
+    margin-bottom: 30px;
+    &:after { @include _clear }
+    position: relative;
+    font-size: 17px;
+    border-bottom: 1px solid #ffd24d;
+    width: 100%;
+    > .service-icon {
+      float: left;
+      margin: 35px;
+      background-image: url('images/service.svg');
+      background-repeat: no-repeat;
+      width: 75px;
+      height: 75px;
+    }
+    > .service-items {
+      float: left;
+      padding-bottom: 30px;
+      > .item {
+        font-weight: 300;
+      }
+    }
   }
 }

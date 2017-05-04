@@ -1,8 +1,0 @@
-.page-vk {
-  float: right;
-  width: 33.333333%;
-  padding: 0 12px;
-  height: 1200px;
-  @media (max-width: $bp-medium) { display: none; }
-  &:after { @include _clear }
-}

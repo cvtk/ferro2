@@ -127,18 +127,25 @@
     font-style: normal;
     margin-left: 20px;
   }
-  &._search:before { content: "\f100"; }
+  &._translation:before { content: "\f100"; }
   &._logout:before { content: "\f101"; }
-  &._cart:before { content: "\f102"; }
-  &._mail:before { content: "\f103"; }
-  &._twitter:before { content: "\f104"; }
-  &._vk:before { content: "\f105"; }
-  &._ok:before { content: "\f106"; }
+  &._mail:before { content: "\f102"; }
+  &._twitter:before { content: "\f103"; }
+  &._vk:before { content: "\f104"; }
+  &._ok:before { content: "\f105"; }
+  &._cart:before { content: "\f106"; }
   &._close:before { content: "\f107"; }
-  &._next:before { content: "\f108"; }
-  &._back:before { content: "\f109"; }
-  &._reload:before { content: "\f10a"; }
-  &._facebook:before { content: "\f10b"; }
-  &._ruble:before { content: "\f10c"; }
+  &._search:before { content: "\f108"; }
+  &._next:before { content: "\f109"; }
+  &._back:before { content: "\f10a"; }
+  &._reload:before { content: "\f10b"; }
+  &._facebook:before { content: "\f10c"; }
+  &._ruble:after { 
+    content: "\f10d"; 
+    font-family: "Icons";
+    font-size: 20px;
+    font-style: normal;
+    margin-left: 2px;
+  }
 }
 

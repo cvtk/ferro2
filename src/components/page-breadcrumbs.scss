@@ -1,0 +1,24 @@
+.page-breadcrumbs {
+  width: 100%;
+  background-color: #000;
+  > .breadcrumbs-items {
+    @include _container;
+    &:after { @include _clear }
+    > .item, .item:link, .item:visited, .item:active {
+      color: $pri-color;
+      padding: 15px 0;
+      text-decoration: none;
+      transition: color .25s ease;
+      &:hover { color: $sec-color; }
+    }
+    .icon {
+      vertical-align: text-bottom;
+      &:before {
+        font-size: 10px;
+        margin-right: 5px;
+        margin-left: 0;
+        color: $pri-color;
+      }
+    }
+  }
+}

@@ -19,6 +19,25 @@ body {
   min-width: $min-width;
   line-height: 1.5;
 }
+.link, .link:link, .link:visited, .link:active {
+  text-decoration: none;
+  color: $sec-color;
+  padding: 20px 0;
+  position: relative;
+  transition: .25s ease;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: 50%;
+    bottom: 30%;
+    background-color: $sec-color;
+    transition: .35s ease-in-out;
+  }
+  &:hover:after  { width: 100%; left: 0; }  
+}
+
 
 .main-page > .header {
   background: none;
