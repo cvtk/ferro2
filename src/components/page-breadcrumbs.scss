@@ -9,14 +9,14 @@
       padding: 15px 0;
       text-decoration: none;
       transition: color .25s ease;
-      &:hover { color: $sec-color; }
+      &:hover, &._active { color: $sec-color; }
     }
     .icon {
       vertical-align: text-bottom;
       &:before {
         font-size: 10px;
         margin-right: 5px;
-        margin-left: 0;
+        margin-left: 5px;
         color: $pri-color;
       }
     }
