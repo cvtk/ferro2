@@ -19,13 +19,18 @@
   > .content {
     position: absolute;
     text-align: center;
-    top: 40%;
-    left: 10%;
+    width: 100%;
+    top: 35%;
     z-index: 1;
-    padding: 0 12px;
+    padding: 0 24px;
     font-size: 52px;
     color: $pri-color;
     font-weight: 400;
-    > ._hl { color: $sec-color; }
+    > p { margin: 0; 
+      > strong {
+      font-weight: 400;
+      color: $sec-color;
+      }
+    }
   }
 }

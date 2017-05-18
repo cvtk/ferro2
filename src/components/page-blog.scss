@@ -67,8 +67,9 @@
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
-    &._stock { background-color: $frt-color; }
-    &._article { background-color: #7518c7; }
+      &._news { background-color: #c74718; }
+      &._sales { background-color: $frt-color; }
+      &._articles { background-color: #7518c7; }
   }
 }
 

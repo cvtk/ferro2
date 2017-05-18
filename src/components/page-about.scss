@@ -2,11 +2,10 @@
   @include _container;
   &:after { @include _clear }
   padding-top: 0;
-}
-
-.about-item {
-  font-size: 17px;
-  > .item-list {
-    list-style: square url('images/checked.svg');
+  > .about-item {
+    font-size: 17px;
+    > ul {
+      list-style: square url('images/checked.svg');
+    }
   }
 }

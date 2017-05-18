@@ -2,32 +2,10 @@
   @include _container;
   &:after { @include _clear }
   padding-top: 0;
-  > .news-pagination {
-    margin: 0 auto;
-    width: 330px;
-    text-align: center;
-    > .item {
-      display: inline-block;
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      margin: 15px 5px;
-      color: #707070;
-      border: 1px solid rgba(0, 0, 0, 0.25);
-      padding: 5px 15px;
-      text-decoration: none;
-      text-align: center;
-      transition: .35s ease-in-out;
-      &:hover, &._active {
-        background: $sec-color;
-        color: #fff;
-        border: 1px solid #fff;
-      }
-    }
-}
   > .news-sidebar {
+    &:after { @include _clear }
     position: relative;
-    float: left;
+    float: right;
     width: 33.333333%;
     padding-left: 15px;
     @media (max-width: $bp-medium) { display: none; }
@@ -35,14 +13,28 @@
       text-align: right;
       border-bottom: 1px solid #eee;
       margin-bottom: 30px;
+      .title {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        text-decoration: none;
+        color: $pri-color;
+        font-size: 17px;
+        padding: 15px;
+        background-color: $sec-color;
+        text-align: left;
+        transition: padding .25s ease;
+        &:hover { padding-left: 25px; }
+      }
       .categories-item {
         position: relative;
-        transition: background-color .25s ease;
+        display: block;
         cursor: pointer;
-        &:hover {
-          background-color: #eee;
-          > .icon:before { margin-left: 30px; color: $sec-color; }
-          > .category { color: $sec-color; }
+        text-decoration: none;
+        color: $cnt-color;
+        &:hover, &._active {
+          background-color: lighten($sec-color, 50);
+          > .icon:before { margin-left: 30px; }
         }
         &:after { @include _clear }
         > .icon {
@@ -95,6 +87,29 @@
       width: 66.666667%;
       padding-right: 15px;
       @media (max-width: $bp-medium) { width: 100%; }
+      > .news-pagination {
+        margin: 0 auto;
+        width: 330px;
+        text-align: center;
+        > .item {
+          display: inline-block;
+          font-size: 13px;
+          font-weight: 600;
+          text-transform: uppercase;
+          margin: 15px 5px;
+          color: $cnt-color;
+          border: 1px solid rgba(0, 0, 0, 0.25);
+          padding: 5px 15px;
+          text-decoration: none;
+          text-align: center;
+          transition: .35s ease-in-out;
+          &:hover, &._active {
+            background: $sec-color;
+            color: #fff;
+            border: 1px solid #fff;
+          }
+        }
+      }
     > .items-article {
       &:after { 
         @include _clear;
@@ -125,8 +140,9 @@
               text-align: center;
               font-weight: bold;
               text-transform: uppercase;
-              &._stock { background-color: $frt-color; }
-              &._article { background-color: #7518c7; }
+              &._news { background-color: #c74718; }
+              &._sales { background-color: $frt-color; }
+              &._articles { background-color: #7518c7; }
           }
       }
       > .meta {

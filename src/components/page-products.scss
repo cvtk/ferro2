@@ -6,9 +6,9 @@
 .products-wrapper {
   &:after { @include _clear }
   > .wrapper-filter {
+    position: relative;
     float: left;
     width: 25%;
-    height: 500px;
     > .filter-search {
       width: 90%;
       position: relative;
