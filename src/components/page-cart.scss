@@ -1,0 +1,155 @@
+.page-cart {
+  &._hidden {
+    right: -100%;
+  }
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  z-index: 4;
+  height: 100%;
+  background-color: $cnt-color;
+  transition: right 1s cubic-bezier(.61,.44,.17,1.2);
+  padding: 0 20px;
+  color: lighten($cnt-color, 25);
+  @media (max-width: $bp-small) { width: 320px; }
+  &:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $cnt-color;
+  right: -100%;
+  top: 0;
+  }
+
+  > .close {
+    display: block;
+    color: #eee;
+    text-align: right;
+    cursor: pointer;
+    padding: 25px 0;
+    transition: color .35s ease-in-out;
+    border-bottom: 1px solid lighten($cnt-color, 25);
+    &:hover {color: $sec-color;}
+  }
+
+  > .cart-price {
+    &:after { @include _clear }
+    width: 100%;
+    color: #eee;
+    margin: 35px 0;
+    padding: 20px 0;
+    line-height: 1;
+    border-top: 1px solid lighten($cnt-color, 25);
+    border-bottom: 1px solid lighten($cnt-color, 25);
+    &._disabled { opacity: 0; }
+    > .title {
+      float: left;
+    }
+    > .price {
+      &:after { 
+      font-size: 12px;
+      }
+    float: right;
+    }
+  }
+
+  > .order {
+    display: block;
+    width: 100%;
+    color: #eee;
+    border: 1px solid #5f5f5f;
+    padding: 12px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1;
+    transition: .35s ease-in-out;
+    &:hover {background-color: #3e3e3e;}
+    &._disabled { opacity: 0; }
+  }
+}
+
+.cart-listview {
+  padding: 7px 0;
+  height: 70%;
+  overflow-y: auto;
+  > .listview-item {
+      &:after { @include _clear }
+      position: relative;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #464646;
+      font-size: 16px;
+      line-height: 36px;
+      &._empty { padding-top: 7px; }
+      .thumb {
+        display: block;
+        width: 30%;
+        height: 72px;
+        margin-right: 5%;
+        float: left;
+        @media (max-width: $bp-small) { display: none; }
+    }
+      .title {
+        display: block;
+        font-weight: 300;
+        width: 65%;
+        float: left;
+        color: #eee;
+        text-decoration: none;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+      .remove {
+      position: absolute;
+      top: 14px;
+      right: 0;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      line-height: 0;
+      color: #a5a5a5;
+      transition: .35s ease;
+      cursor: pointer;
+      text-decoration: none;
+        &:hover {color: #eee;}
+        &:before { font-size: 11px; }
+    }
+      .qty {
+      display: block;
+      width: 45%;
+      float: left;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: $pri-color;
+      font-weight: 300;
+      font-size: 15px;
+      > .input {
+        border: 0;
+        background: transparent;
+        color: #eee;
+        padding: 0;
+        padding-left: 5px;
+        outline: 0;
+        width: 40px;
+        line-height: 16px;
+        }
+    }
+      .price {
+      display: block;
+      width: 20%;
+      color: #eee;
+      float: right;
+      text-align: right;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      &:after { 
+        font-size: 14px;
+      }
+    }
+  }
+}

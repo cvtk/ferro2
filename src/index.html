@@ -29,6 +29,41 @@
   <link rel="stylesheet" href="assets/a.css">
 </head>
 <body class="main-page">
+<div class="page-cart _hidden">
+    <span class="close" data-cart-trigger>Закрыть</span>
+    <div class="cart-listview">
+      <div class="listview-item">
+        <img class="thumb" src="assets/images/4.jpg" />
+        <a class="title" href="#">Product Title Steam Product lequid</a>
+        <span class="remove icon _close" title="Удалить товар"></span>
+        <span class="qty">Количество:<input type="number" step="1" min="1" max="999" name="count" value="1" class="input" />
+        </span>
+        <span class="price icon _ruble">550</span>
+      </div>
+      <div class="listview-item">
+        <img class="thumb" src="assets/images/4.jpg" />
+        <a class="title" href="#">Product Title Steam Product lequid</a>
+        <span class="remove icon _close" title="Удалить товар"></span>
+        <span class="qty">Количество:<input type="number" step="1" min="1" max="999" name="count" value="1" class="input" />
+        </span>
+        <span class="price icon _ruble">550</span>
+      </div>
+      <div class="listview-item">
+        <img class="thumb" src="assets/images/4.jpg" />
+        <a class="title" href="#">Product Title Steam Product lequid</a>
+        <span class="remove icon _close" title="Удалить товар"></span>
+        <span class="qty">Количество:<input type="number" step="1" min="1" max="999" name="count" value="1" class="input" />
+        </span>
+        <span class="price icon _ruble">550</span>
+      </div>
+
+    </div>
+    <div class="cart-price">
+      <span class="title">Итог:</span>
+      <span class="price icon _ruble">550</span>
+    </div>
+    <a class="order" href="#">Оформить заказ</a>
+</div>
 <header class="page-header">
   <div class="header-layout">
     <a class="logo-link" href="#">
@@ -42,7 +77,7 @@
       <a class="item" href="contacts.html">Контакты</a>
       <span class="icon _translation" title="Translate to english"></span>
       <span class="icon _search"></span>
-      <span class="icon _cart"><span class="counter">2</span></span>
+      <span class="icon _cart" data-cart-trigger><span class="counter">18</span></span>
     </nav>
   </div>
 </header>

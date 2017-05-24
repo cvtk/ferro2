@@ -87,7 +87,7 @@
       width: 66.666667%;
       padding-right: 15px;
       @media (max-width: $bp-medium) { width: 100%; }
-      > .news-pagination {
+       .news-pagination {
         margin: 0 auto;
         width: 330px;
         text-align: center;
@@ -110,7 +110,7 @@
           }
         }
       }
-    > .items-article {
+      .items-article {
       &:after { 
         @include _clear;
         border-bottom: 1px solid #eee;

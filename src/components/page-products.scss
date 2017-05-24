@@ -106,7 +106,8 @@
       font-size: 14px;
     }
   }
-  > .addtocart, .view {
+  form { display: inline; }
+  .addtocart, .view {
     display: inline-block;
     width: 125px;
     margin: 10px auto;
@@ -122,6 +123,7 @@
     outline: 0;
     cursor: pointer;
     background-color: transparent;
+    line-height: 1.5;
     &:hover {
       background-color: $sec-color;
       color: $pri-color;
