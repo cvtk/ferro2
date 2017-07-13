@@ -1,5 +1,6 @@
 .page-products {
   @include _container;
+  min-height: 1200px;
   &:after { @include _clear }
 }
 

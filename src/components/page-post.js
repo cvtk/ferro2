@@ -10,4 +10,4 @@
       VK.Widgets.Group("vkWidget", {mode: 3, width: widgetWidth, color1: 'EEEEEE', color2: '282828', color3: '1ABAC8'}, 104929618);
   }
 
-})()
+})();
