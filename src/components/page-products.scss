@@ -95,6 +95,9 @@
     font-weight: 300;
     color: $cnt-color;
     margin: 10px 0;
+    height: 48px;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   > .price {
     font-weight: 700;

@@ -1,4 +1,4 @@
-(function() {
+document.querySelector('.categories-items') && (function() {
   var categories = document.querySelector('.categories-items'),
       search = document.querySelector('.filter-search > input'),
       currentCategory = '';

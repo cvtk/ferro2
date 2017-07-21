@@ -132,28 +132,18 @@
       > ._ink { color: $sec-color; }
     }
 
-    > .option {
-      display: inline-block;
-      margin: 20px 30px 15px 0;
-      position: relative;
-      font-size: 14px;
-      color: #eee;
-      z-index: 1;
-      min-width: 90px;
+    > .options {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      padding: 10px;
+      margin-bottom: 22px;
+      outline: none;
+      border: 1px solid $sec-color;
       cursor: pointer;
-
-      &:after {
-        content: " ";
-        transition: .35s ease;
-        background-color: #aaa;
-        border-radius: 25px;
-        width: 40px;
-        height: 40px;
-        top: 4px;
-        right: -4px;
-        position: absolute;
-        z-index: -1;
-        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+      transition: border-color .35s ease;
+      &:hover {
+        border-color: darken($sec-color, 10%);
       }
     }
 
