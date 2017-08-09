@@ -1,0 +1,53 @@
+.page-order {
+  @include _container;
+  &:after { @include _clear }
+  > .order-form {
+    &:after { @include _clear }
+    float: left;
+    width: 50%;
+    min-height: 65vh;
+    .form-client {
+      display: block;
+      width: 85%;
+      margin: 0 auto;
+      .submit {
+        display:block;
+        font-family: "Open Sans", Arial, Helvetica, sans-serif;
+        width:200px;
+        margin: 0 auto;
+        font-size:14px;
+        font-weight:600;
+        text-transform:uppercase;
+        color: $sec-color;
+        background-color: #fff;
+        border: 1px solid $sec-color;
+        cursor: pointer;
+        padding:15px;
+        outline: none;
+        text-decoration: none;
+        text-align: center;
+        line-height: 17px;
+        transition: .25s ease-in-out;
+         margin-top: 125px;
+        &:hover { background-color: $sec-color; color: #fff; }
+      }
+      input {
+        display: block;
+        width: 100%;
+        padding: 10px 15px;
+        border: 1px solid #ccc;
+        font-size: 24px;
+        margin-bottom: 20px;
+        &::placeholder { color: #aaa; font-family: "Open Sans", Arial, Helvetica, sans-serif; font-weight: 300; }
+      }
+      .phone { width: 49%; float: left }
+      .email { width: 49%; float: right }
+
+    }
+  }
+  > .order-cart {
+    float: right;
+    width: 50%;
+    .cart-listview > .listview-item * { color: #444 }
+  }
+}
