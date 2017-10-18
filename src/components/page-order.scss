@@ -48,6 +48,18 @@
   > .order-cart {
     float: right;
     width: 50%;
+    .cart-listview { padding-top: 0 }
+    ._ruble:after { font-size: 14px }
+    .cart-listview > .listview-item:first-child { padding-top: 0 }
     .cart-listview > .listview-item * { color: #444 }
+  }
+
+  @media (max-width: $bp-small) {
+    > .order-cart { width: 100%; float: none; margin-bottom: 30px;}
+    > .order-form {
+      width: 100%;
+      float: none;
+      > .form-client { width: 100% }
+    }
   }
 }

@@ -78,10 +78,11 @@
     }
     > .header {
       position: absolute;
-      width: 45%;
+      width: 80%;
       top: 20%;
       left: 10%;
-      font-size: 80px;
+      right: 10%;
+      font-size: 64px;
       font-weight: 700;
       color: rgba(0, 0, 0, .75)
     }
@@ -99,11 +100,17 @@
       text-align: center;
       line-height: 17px;
       transition: .25s ease-in-out;
+      &._invert { color: #fff; border-color: #fff }
       &:hover { 
         background-color: rgba(255, 255, 255, .35);
         border-color: darken( $pri-color, 100% ); 
         color: $sec-color;
       }
+    }
+  }
+  @media (max-width: $bp-large) {
+    .header {
+      font-size: 24px !important;
     }
   }
 }

@@ -1,10 +1,12 @@
 document.querySelector('.categories-items') && (function() {
   var categories = document.querySelector('.categories-items'),
       search = document.querySelector('.filter-search > input'),
-      currentCategory = '';
+      currentCategory = '',
+      route = window.location.hash.substr(1);
 
   var selectCategory = function(id) {
     if ( currentCategory != id ) {
+      window.location.hash = '#' + id;
       categories.querySelector('._active').classList.remove('_active');
       categories.querySelector("[data-id='" + id + "']").classList.add('_active');
       return id;
@@ -70,7 +72,8 @@ document.querySelector('.categories-items') && (function() {
       ajax.send(url, callback, 'POST', query.join('&'), async)
   };
 
-  categories.querySelectorAll('*').forEach(function(category) {
+  var categoriesItems = categories.querySelectorAll('*');
+  [].forEach.call(categoriesItems, function(category) {
     category.addEventListener('click', function() {
       var id = this.dataset.id;
       if ( id ) {
@@ -90,7 +93,17 @@ document.querySelector('.categories-items') && (function() {
         items.innerHTML = response;
       });
     }
-  })
+  });
+  if ( route ) {
+    currentCategory = selectCategory(route);
+    ajax.post('/ajax', { action: 'filter', category: route }, function(response) {
+      var items = document.querySelector('.wrapper-items');
+      items.innerHTML = response;
+    });
+  } else {
+    currentCategory = categories.querySelector('._active').dataset.id;
+  };
+
 })();
 
 $(document).ready(function(){

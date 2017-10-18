@@ -33,4 +33,9 @@
       }
     }
   }
+  @media (max-width: $bp-large) {
+    .content {
+      font-size: 24px;
+    }
+  }
 }

@@ -26,10 +26,25 @@
       float: right;
       text-align: right;
       width: 70%;
+      &._showed:before { color: $sec-color; }
+      &:before {
+        content: "\f100";
+        position: fixed;
+        display: none;
+        font-family: "Icons";
+        font-size: 28px;
+        color: #fff;
+        right: 32px;
+        top: 16px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+      }
       > .icon {
         position: relative;
         text-decoration: none;
         transition: .45s ease;
+        &:last-child { margin-right: 20px }
         &:before {
         cursor: pointer;
         color: $pri-color;
@@ -80,8 +95,29 @@
       > .item:hover:after, .item._active:after  { width: 100%; left: 0; }
     }
     @media (max-width: $bp-large) {
+      .logo-link {
+        width: 210px;
+        > .image { max-width: 100%; }
+      }
+      
       .main-nav {
-        display: none;
+        width: 100%;
+        position: fixed;
+        right: -300%;
+        top: 105px;
+        background-color: rgba(0, 0, 0, .75);
+        transition: right .35s;
+        &:before { display: block }
+        &._showed { right: 0 }
+        > .item {
+          display: block;
+          line-height: 1.5;
+          padding-right: 15px;
+          padding-left: 15px;
+          margin-right: 0;
+          margin-left: 0;
+          &:after { display: none }
+        }
       }
     }
   }

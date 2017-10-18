@@ -72,7 +72,7 @@
 
 .cart-listview {
   padding: 7px 0;
-  height: 70%;
+  height: 85%;
   overflow-y: auto;
   > .listview-item {
       &:after { @include _clear }

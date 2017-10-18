@@ -1,9 +1,16 @@
 (function() {
-  if (document.getElementsByClassName('page-post').length) {
-      if ( $(window).width() < 768 ) {
-        widgetWidth = $('#vkWidget').parent().width();
+  var parentWidth = function(el) { return el.parentElement.clientWidth };
+
+  var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+      vkWidget = document.getElementById('vkWidget'),
+      widgetWidth = 0;
+
+  if (!!document.getElementsByClassName('page-post').length) {
+
+      if ( windowWidth < 768 ) {
+        widgetWidth = parentWidth(vkWidget);
       } else {
-        widgetWidth = $('#vkWidget').parent().width() / 3;
+        widgetWidth = parentWidth(vkWidget) / 3;
       }
       
 

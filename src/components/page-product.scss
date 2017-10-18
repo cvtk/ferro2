@@ -84,7 +84,10 @@
     width: 70%;
     z-index: 1;
     padding-right: 30px;
-    @media (max-width: $bp-large) { width: 100%; padding-left: 12px; padding-right: 12px;}
+    @media (max-width: $bp-large) {
+      width: 100%; padding-left: 12px; padding-right: 12px;
+      > .wrapper-image { width: 280px !important }
+    }
     > .wrapper-image {
       position: relative;
       width: 700px;

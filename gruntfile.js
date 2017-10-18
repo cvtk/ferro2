@@ -74,6 +74,17 @@ module.exports = function(grunt) {
         dest: 'dist/assets/a.js'
       }
     },
+    babel: {
+      options: {
+        sourceMap: true,
+        presets: ['es2015']
+      },
+      dist: {
+        files: {
+          'dist/assets/a.js': 'dist/assets/a.js'
+        }
+      }
+    },
 
     cssmin: {
       options: {
@@ -122,6 +133,8 @@ module.exports = function(grunt) {
       },
     }
   });
+  
+  grunt.loadNpmTasks('grunt-babel');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
@@ -131,6 +144,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['copy', 'concat', 'sass', 'autoprefixer', 'uglify', 'imagemin', 'cssmin']);
+  grunt.registerTask('default', ['copy', 'concat', 'sass', 'autoprefixer', 'babel', 'uglify', 'imagemin', 'cssmin']);
   grunt.registerTask('dev', ['connect', 'watch']);
 };

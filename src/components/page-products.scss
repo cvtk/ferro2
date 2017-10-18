@@ -6,6 +6,29 @@
 
 .products-wrapper {
   &:after { @include _clear }
+  @media (max-width: $bp-medium) {
+    > .wrapper-filter {
+      width: 50% !important;
+    }
+    > .wrapper-items {
+      width: 50% !important;
+      > .items-product {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: $bp-small) {
+    > .wrapper-filter {
+      width: 100% !important;
+    }
+    > .wrapper-items {
+      width: 100% !important;
+      > .items-product {
+        width: 100%;
+      }
+    }
+  }
+  
   > .wrapper-filter {
     position: relative;
     float: left;

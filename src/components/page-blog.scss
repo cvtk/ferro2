@@ -3,6 +3,11 @@
   margin: 3px;
   height: 100vh;
   &:after { @include _clear }
+  @media (max-width: $bp-large) { height: 60vh; }
+  @media (max-width: $bp-medium) { height: 100vh; }
+  @media (max-width: $bp-small) { height: 125vh; }
+  
+  
 }
 
 .blog-item {
@@ -97,11 +102,13 @@
 
 @media (max-width: $bp-large) {
   .blog-item > .item-content {
-    > .header { font-size: 28px; }
+    > .header { font-size: 18px; }
     > .teaser { font-size: 12px; }
   }
   .blog-item:nth-child(1) {
     width: 75%;
+    > .item-content > .header { font-size: 28px; }
+    > .item-content > .teaser { font-size: 12px; }
   }
   .blog-item:nth-child(2) {
     left: 75%;
@@ -118,9 +125,9 @@
     top: 40vh;
   }
   .blog-item:nth-child(5) {
-    width: 100%;
+    width: 50%;
     left: 0;
-    top: 60vh;
+    top: 40vh;
   }
 }
 
